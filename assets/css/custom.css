@@ -1,0 +1,312 @@
+/* MIXINs */
+a.external[target=_blank]:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+  position: relative;
+  bottom: 4px;
+}
+
+.about-me-container {
+  text-align: center;
+  padding-top: 0 !important;
+  max-width: 840px;
+  margin: 0 auto;
+  float: none !important;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+.about-me-container .about-me {
+  display: inline-block;
+  color: black;
+  padding: 18px;
+  padding-bottom: 0;
+  font-size: 20px;
+  line-height: 40px;
+  vertical-align: top;
+  margin-left: 12px;
+  margin-top: 20px;
+}
+.about-me-container .about-me .description {
+  margin: 0.75rem 0;
+}
+.about-me-container .profile-photo {
+  display: inline-block;
+  margin-top: 20px;
+}
+.about-me-container .profile-photo a {
+  -webkit-border-radius: 4px 4px 0 0 4px 4px 4px;
+  -moz-border-radius: 4px 4px 0 0 4px 4px 4px;
+  -o-border-radius: 4px 4px 0 0 4px 4px 4px;
+  border-radius: 4px 4px 0 0 4px 4px 4px;
+  -webkit-box-shadow: 0px 0px 10px black 3px 4px #444;
+  -moz-box-shadow: 0px 0px 10px black 3px 4px #444;
+  box-shadow: 0px 0px 10px black 3px 4px #444;
+}
+
+body #wrap #main {
+  overflow: hidden;
+}
+
+.project-wrapper {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  width: auto;
+  float: none;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  max-width: 840px;
+}
+.project-wrapper .project {
+  padding: 20px;
+  padding-right: 0px;
+  margin: 5px 5px 15px 5px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  min-height: 128px;
+}
+.project-wrapper .project img.project-icon {
+  margin-top: 25px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  -webkit-box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  -moz-box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.project-wrapper .project img.project-icon:hover, .project-wrapper .project img.project-icon:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.project-wrapper .project .project-info {
+  margin-left: 160px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.project-wrapper .project .project-info .project-title {
+  margin-bottom: 7px;
+}
+.project-wrapper .project .project-info .project-title a {
+  color: black;
+}
+.project-wrapper .project .project-info .project-title a:hover {
+  color: #0085A1;
+}
+.project-wrapper .project .project-info .project-description {
+  padding: 5px 5px 5px 0px;
+  position: relative;
+  top: 10px;
+}
+.project-wrapper .project .project-info .project-press {
+  margin-top: -20px;
+  position: relative;
+  top: 40px;
+  text-align: right;
+  margin-left: 0px;
+}
+.project-wrapper .project .project-info .project-press li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+}
+.project-wrapper .project .project-info .project-press li a {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.project-wrapper .project .project-info .project-press li a:hover, .project-wrapper .project .project-info .project-press li a:focus {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.install-wrapper {
+  margin: 25px;
+  text-align: center;
+}
+.install-wrapper .install-button {
+  cursor: pointer;
+  width: 128px;
+  height: 128px;
+  border: none;
+  -webkit-box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  -moz-box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  box-shadow: -5px 6px 4px 0px silver 3px 4px #444;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.install-wrapper .install-button:hover, .install-wrapper .install-button:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.entry-title {
+  line-height: 40px;
+}
+.entry-title a {
+  color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .about-me-container {
+    margin-top: 0px !important;
+    max-width: 780px;
+  }
+  .about-me-container .about-me {
+    margin-top: 0px;
+    padding: 18px 15px;
+    margin-left: 0px;
+  }
+
+  .profile-photo:hover a:before, .profile-photo.hover a:before {
+    background: transparent !important;
+    -webkit-box-shadow: 0 0 100px 50px transparent !important 3px 4px #444;
+    -moz-box-shadow: 0 0 100px 50px transparent !important 3px 4px #444;
+    box-shadow: 0 0 100px 50px transparent !important 3px 4px #444;
+  }
+}
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto 0px auto;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+}
+.profile-photo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/profile2_mod.png");
+  background-size: 0, cover;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.profile-photo a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  background: inherit;
+  background-size: cover, cover;
+  background-position: bottom;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  -o-transform-origin: bottom;
+  transform-origin: bottom;
+}
+.profile-photo a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  -webkit-box-shadow: 0 0 100px 50px white 3px 4px #444;
+  -moz-box-shadow: 0 0 100px 50px white 3px 4px #444;
+  box-shadow: 0 0 100px 50px white 3px 4px #444;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0.15;
+  -webkit-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  -moz-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  -ms-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  -o-transform-origin: bottom;
+  transform-origin: bottom;
+}
+.profile-photo a span {
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font: bold 12px/36px Montserrat;
+  text-align: center;
+  -webkit-transform: rotateX(-87deg);
+  -moz-transform: rotateX(-87deg);
+  -ms-transform: rotateX(-87deg);
+  transform: rotateX(-87deg);
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  -o-transform-origin: top;
+  transform-origin: top;
+  z-index: 1;
+}
+.profile-photo:hover a, .profile-photo.hover a {
+  -webkit-transform: rotateX(70deg);
+  -moz-transform: rotateX(70deg);
+  -ms-transform: rotateX(70deg);
+  transform: rotateX(70deg);
+}
+.profile-photo:hover a:before, .profile-photo.hover a:before {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5) 3px 4px #444;
+  -moz-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5) 3px 4px #444;
+  box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5) 3px 4px #444;
+  -webkit-transform: rotateX(0) translateZ(-60px) scale(0.85);
+  -moz-transform: rotateX(0) translateZ(-60px) scale(0.85);
+  -ms-transform: rotateX(0) translateZ(-60px) scale(0.85);
+  transform: rotateX(0) translateZ(-60px) scale(0.85);
+}

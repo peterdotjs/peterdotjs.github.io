@@ -1,0 +1,403 @@
+/* MIXINs */
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+  
+  @mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px , $colour: #333 ) {
+    -webkit-text-shadow:$top $left $blur $colour; 
+    -moz-text-shadow:$top $left $blur $colour; 
+    -o-text-shadow:$top $left $blur $colour; 
+    text-shadow:$top $left $blur $colour; 
+  }
+  
+  
+  @mixin box-shadow($top: 3px, $left: 3px, $blur: 4px, $colour: #444, $inset:"") {
+    -webkit-box-shadow: #{$inset} $top $left $blur $colour;
+    -moz-box-shadow:  #{$inset} $top $left $blur $colour;
+    box-shadow: #{$inset} $top $left $blur $colour;
+  }
+
+  @mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+  
+  @mixin border-radii($tl : 4px, $tr : 4px, $br: 4px, $bl: 4px) {
+    -webkit-border-radius:$tl $tr $br $bl;
+    -moz-border-radius:$tl $tr $br $bl;
+    -o-border-radius:$tl $tr $br $bl;
+    border-radius:$tl $tr $br $bl;
+  }
+  
+  @mixin rotate( $val: -2deg ) {
+    -webkit-transform: rotate($val);
+    -moz-transform: rotate($val);
+    -ms-transform: rotate($val);
+    -o-transform: rotate($val);
+    transform: rotate($val);
+  }
+  
+  @mixin transform($val) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    transform: $val;
+  }
+  
+  @mixin transform-origin($val) {
+    -webkit-transform-origin: $val;
+    -moz-transform-origin: $val;
+    -ms-transform-origin: $val;
+    transform-origin: $val;
+  }
+  
+  @mixin transform-style($val) {
+    -webkit-transform-style: $val;
+    -moz-transform-style: $val;
+    -ms-transform-style: $val;
+    transform-style: $val;
+  }
+  
+  @mixin perspective($val) {
+    -webkit-perspective: $val; 
+    -moz-perspective: $val; 
+    -ms-perspective: $val; 
+    perspective: $val;
+  }
+  
+  @mixin perspective-origin($val){
+    -webkit-perspective-origin: $val;
+    -moz-perspective-origin: $val;
+    -ms-perspective-origin: $val;
+    perspective-origin: $val;
+  }
+  
+  @mixin font( $name, $src, $hash ) {
+    @font-face {
+      font-family: $name;
+      src: url('fonts/' + $src + '.eot');
+      src: url('fonts/' + $src + '.eot?#iefix') format('embedded-opentype'),
+           url('fonts/' + $src + '.woff') format('woff'),
+           url('fonts/' + $src + '.ttf') format('truetype'),
+           url('fonts/' + $src + '.svg#' + $hash ) format('svg');
+      font-weight:normal;
+      font-style:normal;
+    }
+  }
+  
+  @mixin dropdown_fix {
+    display: block;
+    background: $orange;
+    position: absolute;
+    width:88px;
+    height:15px;
+    left:15px;
+    top:90%;
+  }
+  
+  @mixin mq($point) {
+    @if $point == p {
+      @media all and (max-width:1000px) { @content; }
+    }
+    @else if $point == d { 
+      @media all and  (min-width:1001px) { @content; }
+    }
+    @else if $point == ps { 
+      @media all and (max-width:319px) { @content; }
+    }
+  }
+  
+
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+@mixin transform-origin($prop) {
+    -webkit-transform-origin: $prop;
+    -moz-transform-origin: $prop;
+    -ms-transform-origin: $prop;
+    -o-transform-origin: $prop;
+    transform-origin: $prop;
+  }
+
+  @mixin scale($ratio) {
+    -webkit-transform: scale($ratio);
+       -moz-transform: scale($ratio);
+        -ms-transform: scale($ratio);
+         -o-transform: scale($ratio);
+            transform: scale($ratio);
+  }
+
+  @mixin filter($value) {
+    -webkit-filter: $value;
+       -moz-filter: $value;
+         -o-filter: $value;
+            filter: $value;
+  }
+
+  a.external[target="_blank"]:after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+    position: relative;
+    bottom: 4px;
+ }
+  
+  //about page
+  .about-me-container {
+    text-align: center;
+    padding-top: 0 !important;
+    max-width: 840px;
+    margin: 0 auto;
+    float: none !important;
+      @include transition(opacity 2s ease-in-out);
+      .about-me {
+        display: inline-block;
+        color: black;
+        padding: 18px;
+        padding-bottom: 0;
+        font-size: 20px;
+        line-height: 40px;
+        vertical-align: top;
+        margin-left: 12px;
+        margin-top: 20px;
+  
+          .description {
+            margin: 0.75rem 0;
+          }
+      }
+  
+      .profile-photo {
+      display: inline-block;
+          margin-top: 20px;
+          a {
+              @include border-radii(4px 4px 0 0);
+              @include box-shadow(0px 0px 10px black);
+              //@include rotate(3deg);
+          }
+      }
+  }
+  
+  //$project-link-hover-color: #0181EB;
+  $project-link-hover-color: black;
+  
+  body #wrap #main {
+    overflow: hidden;
+  }
+  //project page
+  .project-wrapper {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    width: auto;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    max-width: 840px;
+  
+    .project {
+      padding: 20px;
+      padding-right: 0px;
+      margin: 5px 5px 15px 5px;
+      overflow: hidden;
+      position: relative;
+      @include border-radius(4px);
+      min-height: 128px;
+      img.project-icon {
+        margin-top: 25px;
+        @include border-radius(15px);
+        position: absolute;
+        left: 25px;
+        top: 15px;
+        @include box-shadow(-5px 6px 4px 0px silver);
+        @include transition(all 0.5s);
+        &:hover , &:active {
+            @include scale(1.1);
+        }
+      }
+      .project-info {
+        margin-left: 160px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        .project-title {
+          margin-bottom: 7px;
+          a {
+            color: black;
+            &:hover {
+              color: #0085A1;
+            }
+          }
+        }
+        .project-description {
+          padding: 5px 5px 5px 0px;
+          position:relative;
+          top: 10px;
+        }
+        .project-press {
+          margin-top: -20px;
+          position: relative;
+          top: 40px;
+          text-align:right;
+          margin-left: 0px;
+  
+          li {
+            display: inline-block;
+            list-style: none;
+            margin-right: 15px;
+  
+            a {
+              @include filter(grayscale(100%));
+              //@include opacity(0.4);
+  
+              &:hover, &:focus {
+                @include filter(grayscale(0%));
+                //@include opacity(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //for tab resize
+  
+  $install-border-color: #ccc;
+  
+  .install-wrapper {
+    margin: 25px;
+    text-align: center;
+    .install-button {
+      cursor: pointer;
+      width: 128px;
+      height: 128px;
+      border: none;
+      @include box-shadow(-5px 6px 4px 0px silver);
+      @include border-radius(15px);
+      @include transition (all 0.5s);
+      &:hover, &:active {
+        @include scale(1.1);
+      }
+    }
+  }  
+    
+  .hidden {
+      display: none !important;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .entry-title {
+    line-height: 40px;
+  
+    a {
+      color: black;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+  
+    .about-me-container {
+      margin-top: 0px !important;
+      max-width: 780px;
+      .about-me {
+        margin-top: 0px;
+        padding: 18px 15px;
+        margin-left: 0px;
+      }
+    }
+  
+    .profile-photo {
+      &:hover, &.hover {
+        a {
+          &:before {
+            background: transparent !important;
+            @include box-shadow(0 0 100px 50px transparent !important);
+          }
+        }
+      }
+    }
+  }
+  
+  //image styles
+  
+  .profile-photo {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto 0px auto;
+    @include perspective(1000px);
+  
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("/assets/img/profile2_mod.png");
+      background-size: 0, cover;
+      @include transform-style(preserve-3d);
+      @include rotate(3deg);
+      @include transition(all 0.7s ease-in-out);
+  
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 36px;
+        background: inherit;
+        background-size: cover, cover;
+        background-position: bottom;
+        @include transform(rotateX(90deg));
+        @include transform-origin(bottom);
+      }
+  
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        @include box-shadow(0 0 100px 50px white);
+        @include transition(all 1s ease-in-out);
+        opacity: 0.15;
+        @include transform(rotateX(95deg) translateZ(-80px) scale(0.75));
+        @include transform-origin(bottom);
+      }
+  
+      span {
+        color: white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        font: bold 12px/36px Montserrat;
+        text-align: center;
+        @include transform(rotateX(-87deg));
+        @include transform-origin(top);
+        z-index: 1;
+      }
+    }
+  
+    &:hover, &.hover {
+      a {
+        @include transform(rotateX(70deg));
+  
+        &:before {
+          opacity: 0;
+          background: rgba(0, 0, 0, 0.5);
+          @include box-shadow(0 0 25px 25px rgba(0, 0, 0, 0.5));
+          @include transform(rotateX(0) translateZ(-60px) scale(0.85));
+        }
+      }
+    }
+  }
+  
+  
