@@ -15,7 +15,8 @@
         {{ site.author }}
         &nbsp;&bull;&nbsp;
       {% endif %}
-      {{ site.time | date: '%Y' }}
+      <!-- {{ site.time | date: '%Y' }} -->
+      <script>new Date().getFullYear()</script>
 
       {% if site.url-pretty %}
         &nbsp;&bull;&nbsp;
