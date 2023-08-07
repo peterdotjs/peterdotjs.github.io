@@ -17,7 +17,7 @@ description: Peter Shin's website and blog.
 
 navbar-links:
   Projects: "projects"
-  Blog: "blog"
+  # Blog: "blog"
 
 # --- Logo --- #
 
